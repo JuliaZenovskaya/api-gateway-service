@@ -7,39 +7,27 @@ spring:
     name: api-gateway-service
 
 eureka:
+  instance:
+    prefer-ip-address: true
+    status-page-url: http://api-gateway-service/
   client:
     serviceUrl:
       defaultZone: http://localhost:8769/eureka
     register-with-eureka: true
     fetch-registry: true
-  instance:
-    status-page-url: http://api-gateway-service/
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 10000
-ribbon:
-  ReadTimeout: 10000
 
 zuul:
   routes:
     orders:
-      path: /orders/**
+      path: /api/orders/**
       serviceId: orders-service
-      strip-prefix: false
     warehouse:
-      path: /warehouse/**
+      path: /api/warehouse/**
       serviceId: items-service
-      strip-prefix: false
     payments:
-      path: /payments/**
+      path: /api/payments/**
       serviceId: payments-service
-      strip-prefix: false
     orderpaid:
-      path: /orderpaid/**
+      path: /api/orderpaid/**
       serviceId: api-gateway-service
-      strip-prefix: false
