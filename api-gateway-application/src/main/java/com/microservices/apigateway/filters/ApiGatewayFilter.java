@@ -1,10 +1,6 @@
 package com.microservices.apigateway.filters;
 
 import com.netflix.zuul.ZuulFilter;
-import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
-
-import javax.servlet.http.HttpServletRequest;
 
 public class ApiGatewayFilter extends ZuulFilter {
     @Override
@@ -23,9 +19,7 @@ public class ApiGatewayFilter extends ZuulFilter {
     }
 
     @Override
-    public Object run() throws ZuulException {
-        RequestContext requestContext = RequestContext.getCurrentContext();
-        HttpServletRequest httpServletRequest = requestContext.getRequest();
+    public Object run() {
         return null;
     }
 }

@@ -1,7 +1,6 @@
 package com.microservices.apigateway.service;
 
 import com.microservices.apigateway.model.Order;
-import com.microservices.apigateway.model.OrderPaid;
 import com.microservices.apigateway.model.Payment;
 
 import java.util.ArrayList;

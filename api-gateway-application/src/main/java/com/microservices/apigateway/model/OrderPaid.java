@@ -11,8 +11,8 @@ import java.util.ArrayList;
 @Setter
 @ToString
 public class OrderPaid {
-    public Order order;
-    public ArrayList<Payment> payments;
+    private Order order;
+    private ArrayList<Payment> payments;
 
     public OrderPaid(Order order, ArrayList<Payment> payments) {
         this.order = order;

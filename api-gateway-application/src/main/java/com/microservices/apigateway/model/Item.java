@@ -6,23 +6,21 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.validation.constraints.NotNull;
-
 @Getter
 @Setter
 @ToString
 public class Item {
     @JsonProperty("id")
-    public int id;
+    private int id;
 
     @JsonProperty("name")
-    public String name;
+    private String name;
 
     @JsonProperty("amount")
-    public int amount;
+    private int amount;
 
     @JsonProperty("price")
-    public float price;
+    private float price;
 
     @JsonCreator
     public Item(@JsonProperty("id") int id, @JsonProperty("name") String name, @JsonProperty("amount") int amount,

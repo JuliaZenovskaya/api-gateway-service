@@ -5,8 +5,6 @@ import com.microservices.apigateway.feign.PaymentsFeignClient;
 import com.microservices.apigateway.model.Order;
 import com.microservices.apigateway.model.Payment;
 import com.microservices.apigateway.service.ApiGatewayService;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
