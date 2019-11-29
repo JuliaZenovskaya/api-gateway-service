@@ -20,10 +20,6 @@ public class ApiGatewayServiceImpl implements ApiGatewayService {
     @Autowired
     PaymentsFeignClient paymentsFeignClient;
 
-    @HystrixCommand(commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "60000")
-    })
-
     @Override
     public Order getOrder(int orderId) {
         return ordersFeignClient.getOrder(orderId);

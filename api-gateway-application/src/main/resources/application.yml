@@ -20,14 +20,19 @@ eureka:
 zuul:
   routes:
     orders:
-      path: /api/orders/**
+      path: /orders/**
       serviceId: orders-service
+      strip-prefix: false
     warehouse:
-      path: /api/warehouse/**
+      path: /warehouse/**
       serviceId: items-service
+      strip-prefix: false
     payments:
-      path: /api/payments/**
+      path: /payments/**
       serviceId: payments-service
+      strip-prefix: false
     orderpaid:
       path: /api/orderpaid/**
       serviceId: api-gateway-service
+      strip-prefix: false
+
